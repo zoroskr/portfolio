@@ -4,8 +4,8 @@
 import ProfilePic from "../images/profile-pic.png"
 
 ---
-  <div class="col-start-1 col-end-3 flex items-center justify-evenly overflow-hidden relative h-auto w-auto" style="background: #333146; border: 2px solid #6100FF; border-radius: 35px;
-  ;">      
+  <div class="col-start-1 col-end-3 flex items-center justify-evenly " style="background: #333146; border: 2px solid #6100FF; border-radius: 35px;
+  ;"> 
       <div class="header">
         <h1 class="title">
         Hi, I'm Felipe F.
@@ -14,7 +14,8 @@ import ProfilePic from "../images/profile-pic.png"
           <span class="text-pink-300">Front End Developer </span> and Systems Degree Student
         </p>
       </div>
-      <div class="cont-img">
+
+      <div class="cont-img h-12 w-24 lg:w-24 lg:h-24 overflow-hidden">
         <img class="pf-pic" src={ProfilePic.src} alt="imagenchula">
      </div>
   </div>
@@ -33,8 +34,6 @@ import ProfilePic from "../images/profile-pic.png"
   }
 
   .cont-img{
-    width: 100px; /* o el ancho que desees */
-        height: 100px; /* o el alto que desees */
         border-radius: 50%;
         overflow: hidden;
         position: relative;
@@ -52,7 +51,7 @@ import ProfilePic from "../images/profile-pic.png"
   .header{
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      padding: 50px;
     }
 
   .title{
