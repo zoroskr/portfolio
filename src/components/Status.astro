@@ -1,0 +1,83 @@
+---
+import CodeBg from "../images/code-bg.png"
+---
+
+  <div class='parent'>
+      <div class='header'>
+        <h2 class='title'>
+            Status 🚀
+        </h2>
+        <p class='paragraf'> <span class='status-p'> Available </span> for job offers</p>
+      </div>
+      <img class='background' src={CodeBg.src}/>   
+    </div>
+
+<style>
+
+    .status-p{
+      animation: conectado 2s infinite;
+
+    }
+      @keyframes conectado {
+    0%, 100% {
+      color: white; /* Color inicial */
+      text-shadow: none; /* Sin sombra */
+    }
+    50% {
+      color: green; /* Color de iluminación */
+      text-shadow: 0 0 10px green; /* Sombra de iluminación */
+    }
+  }
+
+    .background{
+        filter: blur(2px);
+      background: lightgray 50% / cover no-repeat;
+
+      height: 100%; /* Se asegura de que la imagen ocupe todo el alto del div */
+      width: 100%; /* Se asegura de que la imagen ocupe todo el ancho del div */
+      object-fit: cover; /* Cubre el tamaño del contenedor sin distorsiones */
+      position: absolute; /* Posición relativa al div padre */
+
+
+    }
+
+    .parent{
+        display: flex;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        border-radius: 35px;
+        border: 2px solid #6100FF;
+        position: relative; 
+        box-sizing: border-box; 
+    }
+    .header{
+        display: flex;
+      flex-direction: column;
+      height: auto;
+      padding: 50px;
+      z-index: 1;
+    }
+
+    .title{
+        color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom: 10px;
+    }
+    .paragraf{
+        color: #FFF;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+    }
+
+</style>

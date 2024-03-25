@@ -1,0 +1,126 @@
+---
+// Card.astro
+const { 
+  title, 
+  description,
+} = Astro.props;
+
+import Upwork from "../images/icons/upwork.svg"
+import Linkedin from "../images/icons/linkedin.svg"
+
+---
+
+  <div class="parent">
+      <div class="card-content">
+        <h2 class="title" style="
+
+        ">
+        Contact 📬​​</h2>
+        <p class="paragraf" >These are my networks where you can contact me or hire me directly</p>
+      </div>
+
+      
+      
+      <div class="social-icons">
+        <a class="links" target="_blank" href="https://www.linkedin.com/in/felipe-fidalgo-a89303231/">
+            <img class="icon" src={Linkedin.src} alt="icon-linkedin">
+        </a>
+        <a class="links" target="_blank" href="https://www.upwork.com/freelancers/felipefidalgo">
+            <img class="icon" src={Upwork.src} alt="icon-upwork">
+        </a>
+      </div>
+
+
+
+
+    </div>
+
+<style>
+
+    .paragraf{
+            color: #FFF;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+    }
+
+    .title{
+        color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom: 10px;
+    }
+
+    .parent{
+        display: flex;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        border-radius: 35px;
+        border: 2px solid #6100FF;
+        position: relative;
+        box-sizing: border-box; 
+        background: #333146;
+    }
+
+    .links{
+        display: flex;
+        background-color: transparent;
+        height: auto;
+        width: 50px;
+
+    }
+
+        /* This initial state ensures that the social icons are not displayed */
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 50px;
+        transition: opacity 0.4s;
+    }
+
+    .social-icons {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        
+        background-color: transparent;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+
+    /* Hover states */
+    div:hover .card-content {
+    opacity: 0; /* This will 'hide' the content when the card is hovered */
+    }
+
+    div:hover .social-icons {
+    opacity: 1; /* This will 'show' the social icons when the card is hovered */
+    }
+
+
+
+
+
+
+</style>

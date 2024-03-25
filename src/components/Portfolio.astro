@@ -1,0 +1,72 @@
+---
+import Carousel from "./Carousel.astro"
+
+---
+
+  <div class="parent-card">
+      <div class="card-content">
+        <h2 class="title">
+            Portfolio 📚
+        </h2>
+        <p class="paragraf">
+            These are my highlighted projects, but you can find more in my Upwork profile :)
+         </p>
+      </div>
+      <div class="flex">
+         <Carousel></Carousel>
+       </div>
+    </div>
+
+<style>
+    .proyects{
+        display: flex;
+        background-color: aliceblue;
+        margin: auto;
+
+    }
+    .parent-card{
+        display: flex;
+        flex-direction: column;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        align-items: top;
+        justify-content: flex-start;
+        overflow: hidden;
+        border-radius: 35px;
+        border: 2px solid #6100FF;
+        position: relative;
+        box-sizing: border-box; 
+        background: #333146;
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 50px;
+
+    }
+
+
+    .title{
+        color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom: 10px;
+    }
+
+    .paragraf{
+        color: #FFF;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+
+</style>

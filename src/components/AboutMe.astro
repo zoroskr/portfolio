@@ -1,0 +1,65 @@
+---
+// Card.astro
+const { 
+  title, 
+  description,
+} = Astro.props;
+
+
+import Library from "../images/library.jpg"
+---
+
+  <div class=" overflow-hidden relative row-start-2 row-end-4 col-start-1	col-end-2 flex justify-center items-center" style="background: #333146; border: 2px solid #6100FF; border-radius: 35px;">
+      <div class="header">
+        <h2 class="title">
+        About me 👨‍🎓​</h1>
+        <p class="paragraf"
+        >My name is Felipe Fidalgo; I am 21 years old and I live in Buenos Aires, Argentina. I have <span class="text-yellow-400">four years of programming experience </span> and I am currently studying a degree in Systems at the UNLP. My main focus is web development, but I also have training in data analysis, machine learning, web scraping, among other areas. I have collaborated with several companies and local businesses and, at the moment, I am looking for freelancer opportunities on Upwork.</p>
+      </div>
+      <img class='background' src={Library.src}/>   
+    </div>
+
+    <style>
+
+  .title{
+        color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom: 10px;
+  }
+  .paragraf{
+        color: #FFF;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    .header{
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      z-index: 1;
+    }
+
+    .background{
+        filter: blur(2px);
+      background: lightgray 50% / cover no-repeat;
+
+      height: 100%; /* Se asegura de que la imagen ocupe todo el alto del div */
+      width: 100%; /* Se asegura de que la imagen ocupe todo el ancho del div */
+      object-fit: cover; /* Cubre el tamaño del contenedor sin distorsiones */
+      position: absolute; /* Posición relativa al div padre */
+      opacity: 65%;
+
+    }
+    .paragraf:hover {
+      transition: text-shadow 0.3s ease; /* Smooth transition for the effect */
+      text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 35px #fff; /* Glowing effect */
+    }
+
+
+
+    </style>

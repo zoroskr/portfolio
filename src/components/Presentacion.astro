@@ -1,0 +1,75 @@
+---
+// Card.astro
+
+import ProfilePic from "../images/profile-pic.png"
+
+---
+  <div class="col-start-1 col-end-3 flex items-center justify-evenly overflow-hidden relative h-auto w-auto" style="background: #333146; border: 2px solid #6100FF; border-radius: 35px;
+  ;">      
+      <div class="header">
+        <h1 class="title">
+        Hi, I'm Felipe F.
+      </h1>
+        <p class="paragraf">
+          <span class="text-pink-300">Front End Developer </span> and Systems Degree Student
+        </p>
+      </div>
+      <div class="cont-img">
+        <img class="pf-pic" src={ProfilePic.src} alt="imagenchula">
+     </div>
+  </div>
+
+<style>
+
+
+
+  .pf-pic{          
+          position: absolute;
+          left: 50%; 
+          top: 50%;
+          transform: translate(-45%, -40%) scale(1.2); /* Ajusta el valor 'scale' para controlar el nivel del zoom */
+          box-shadow: #333146;
+
+  }
+
+  .cont-img{
+    width: 100px; /* o el ancho que desees */
+        height: 100px; /* o el alto que desees */
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.5);
+  }
+  .parent{
+        
+
+    background: #333146;
+    box-sizing: border-box; 
+
+  }
+
+
+  .header{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+  .title{
+    color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom: 10px;
+  }
+  .paragraf{
+    color: #FFF;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+  }
+
+</style>
